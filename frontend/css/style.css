@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Expense Tracker Stylesheet
+   ========================================================================== */
+
+/* Summary Cards layout using CSS Grid (Phase 3 Requirement) */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Summary Card styling */
+.summary-card {
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Icon container in summary cards */
+.summary-icon-box {
+  width: 54px;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Category Badge custom styles */
+.badge-category {
+  font-weight: 500;
+  font-size: 0.825rem;
+  padding: 0.35em 0.65em;
+  border-radius: 0.375rem;
+  letter-spacing: 0.01em;
+}
+
+.badge-food {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #a3cfbb;
+}
+
+.badge-transport {
+  background-color: #cff4fc;
+  color: #055160;
+  border: 1px solid #9eeaf9;
+}
+
+.badge-bills {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f1aeb5;
+}
+
+.badge-entertainment {
+  background-color: #cfe2ff;
+  color: #084298;
+  border: 1px solid #9ec5fe;
+}
+
+.badge-other {
+  background-color: #e2e3e5;
+  color: #41464b;
+  border: 1px solid #c4c8cb;
+}
+
+/* Table styling */
+.table th {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #495057;
+  white-space: nowrap;
+}
+
+.table td {
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Amount typography */
+.expense-amount-cell {
+  font-family: monospace, system-ui;
+  font-weight: 600;
+  color: #198754;
+}
+
+/* Action buttons in table */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+/* Form styles */
+.form-label {
+  font-size: 0.9rem;
+}
+
+.card {
+  border-radius: 0.75rem;
+}
+
+.card-header {
+  border-top-left-radius: 0.75rem !important;
+  border-top-right-radius: 0.75rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .table td, .table th {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .action-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+}
